@@ -8,7 +8,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { AddSegmentModalComponent } from './components/add-segment-modal/add-segment-modal.component';
 import { AddTableModalComponent } from './components/add-table-modal/add-table-modal.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatMenuModule } from '@angular/material';
+import { MatMenuModule, MatTooltipModule } from '@angular/material';
 
 @NgModule({
   declarations: [GetStartedComponent, AddSegmentModalComponent, AddTableModalComponent],
@@ -19,7 +19,8 @@ import { MatMenuModule } from '@angular/material';
     MatDialogModule,
     FormsModule,
     ReactiveFormsModule,
-    MatMenuModule
+    MatMenuModule,
+    MatTooltipModule
   ],
   entryComponents: [
     AddSegmentModalComponent,

@@ -24,9 +24,40 @@
   align-items: flex-start;
 }
 .card-body {
-  width: 30%;
+  width: 40%;
   margin-right: 20px;
   color: black;
   text-align: left;
   vertical-align: middle;
+}
+.add-icon-bottom {
+  background: #FFFFFF !important;
+  border: 1px solid rgba(60, 60, 60, 0.7) !important;
+  box-sizing: border-box !important;
+  border-radius: 2px !important;
+  padding: 2px;
+}
+.segment-heading {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 12px;
+  text-align: left;
+  letter-spacing: 0.35px;
+  color: rgba(60, 60, 60, 0.7);
+}
+.red {
+  border-color: red;
+}
+.yellow {
+  border-color: yellow;
+}
+.pink {
+  border-color: pink;
+}
+.green {
+  border-color: green;
+}
+.blue {
+  border-color: blue;
 }

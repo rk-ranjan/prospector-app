@@ -61,16 +61,23 @@
     padding: 5px 0px 5px 0px;
 }
 .form-control {
-    background: #FFFFFF;
-    border: 1px solid #CCCCCC;
     box-sizing: border-box;
-    line-height: 25px;
     width: 100%;
     font-family: SF UI Display;
     font-style: normal;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 25px;
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem);
+    padding: .375rem .75rem;
+    font-size: .80rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    outline: blue;
 }
 .contents {
     height: 89vh;

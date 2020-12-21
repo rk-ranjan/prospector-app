@@ -37,8 +37,8 @@
      </div>
     <div class="col-sm-2" style="background-color: #f1f1f1; padding-left: 15px;padding-right: 15px;">
         <h3>Prospector</h3>
-        <input type="text" class="form-control" placeholder="Serach for a table or Segment"/>
-        <p style="color: #7e7878; margin: 8px 0px 5px 0px;font-size: 14px;">SEGMENTS</p>
+        <input type="text" class="form-control" #inputstring placeholder="Serach for a table or Segment" (keyup)="filterOderData(inputstring.value)"/>
+        <p class="segment-heading">SEGMENTS</p>
         <div *ngFor="let segment of segmentList" class="segment-list">
              <span><img src="../../../../../assets/icons/segment-icon.svg" height="14px"/> &nbsp; {{segment.name}} </span>
         </div>
@@ -82,27 +82,27 @@
                        <div class="childrens" *ngIf="segment.expanded">
                             <div class="panel flex-row spacer-in-left-lg spacer-out-bottom-md" *ngIf="gridView">
                                 <div class="panel-item" *ngFor="let child of segment.children">
-                                    <div class="card">
-                                        <img src="../../../../../assets/icons/plus.svg" alt="" height="12x" class="img-item">
+                                    <div class="card" [ngClass]="child.color">
+                                        <img [src]="child.icon" alt="No Img" height="12x" class="img-item">
                                     </div>
                                     <p class="text-sm">{{child.name}}</p>
                                 </div>
                                 <div class="panel-item">
-                                    <div class="card" (click)="openTableModal()">
-                                    <img src="../../../../../assets/icons/plus.svg" alt="" height="12x">
+                                    <div class="card" (click)="openTableModal()"  matTooltip="Add a new table" matTooltipPosition="above">
+                                       <img src="../../../../../assets/icons/plus.svg" alt="" height="12x">
                                     </div>
                                 </div>
                             </div>
                             <div class="card-data spacer-in-left-lg spacer-out-bottom-md" *ngIf="!gridView">
                                 <div class="card-body" *ngFor="let child of segment.children; index as i">
-                                    <p class="text-sm"> <img src="../../../../../../assets/icons/segment-icon.svg" height="12px"/> {{child.name}} </p>
+                                    <p class="text-sm"> <img [src]="child.icon" height="12px"/> {{child.name}} </p>
                                 </div>
                                 <div class="card-body flex-row" (click)="openTableModal()">
-                                    <div class="icon">
-                                    <img src="../../../../../assets/icons/plus.svg" alt="" height="8x">
+                                    <div>
+                                       <img src="../../../../../assets/icons/plus.svg" alt="" height="10x" class="add-icon-bottom">
                                     </div>
                                     <div class="text-sm spacer-in-xs">
-                                    Add a table
+                                       Add a table
                                     </div>
                                 </div>
                             </div>

@@ -17,8 +17,7 @@ export class AddSegmentModalComponent implements OnInit {
     ){
     this.segmentForm = formBuilder.group({
       name: new FormControl('', Validators.required),
-      icon: new FormControl(''),
-      color: new FormControl(''),
+      icon: new FormControl('default')
     });
   }
 

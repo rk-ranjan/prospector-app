@@ -23,19 +23,23 @@ export class GetStartedComponent implements OnInit {
       children: [
         {
           name: 'Network IT-Es 11-50',
-          icon: 'Minus'
+          icon: '../../../../../assets/icons/segment-icon.svg',
+          color: 'red'
         },
         {
           name: 'Network IT-Es 11-50',
-          icon: 'Minus'
+          icon: '../../../../../assets/icons/thumb-icon.svg',
+          color: 'blue'
         },
         {
           name: 'Network IT-Es 11-50',
-          icon: 'Minus'
+          icon: '../../../../../assets/icons/thumb-icon.svg',
+          color: 'yellow'
         },
         {
           name: 'Network IT-Es 11-50',
-          icon: 'Minus'
+          icon: '../../../../../assets/icons/thumb-icon.svg',
+          color: 'pink'
         },
       ]
     },
@@ -46,19 +50,23 @@ export class GetStartedComponent implements OnInit {
       children: [
         {
           name: 'Network IT-Es 11-50',
-          icon: 'Minus'
+          icon: '../../../../../assets/icons/thumb-icon.svg',
+          color: 'red'
         },
         {
           name: 'Network IT-Es 11-50',
-          icon: 'Minus'
+          icon: '../../../../../assets/icons/thumb-icon.svg',
+          color: 'pink'
         },
         {
           name: 'Network IT-Es 11-50',
-          icon: 'Minus'
+          icon: '../../../../../assets/icons/thumb-icon.svg',
+          color: 'yellow'
         },
         {
           name: 'Network IT-Es 11-50',
-          icon: 'Minus'
+          icon: '../../../../../assets/icons/thumb-icon.svg',
+          color: 'green'
         },
       ]
     },
@@ -69,19 +77,19 @@ export class GetStartedComponent implements OnInit {
       children: [
         {
           name: 'IT Course 1',
-          icon: 'Minus'
+          icon: '../../../../../assets/icons/plus.svg'
         },
         {
           name: 'IT Course 2',
-          icon: 'Minus'
+          icon: '../../../../../assets/icons/thumb-icon.svg'
         },
         {
           name: 'IT Course 3',
-          icon: 'Minus'
+          icon: '../../../../../assets/icons/thumb-icon.svg',
         },
         {
           name: 'IT Course 4',
-          icon: 'Minus'
+          icon: '../../../../../assets/icons/thumb-icon.svg',
         },
       ]
     },
@@ -111,8 +119,16 @@ export class GetStartedComponent implements OnInit {
       }
     });
   }
-  
-  ngOnInit() {
+  public returnedList: any[] = this.segmentList;
+  public ngOnInit() {
   }
 
+  public filterOderData = (filterText: string) => {
+    this.segmentList = [...filterText ? this.filterSegments(filterText) : this.returnedList];
+  }
+ 
+  public filterSegments = (text: string) => {
+    let filteredList = this.returnedList.filter((item) => item['name'].toLowerCase().indexOf(text.toLowerCase())  > -1);
+     return filteredList;
+  }
 }

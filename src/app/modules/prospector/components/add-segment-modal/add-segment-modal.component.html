@@ -1,0 +1,24 @@
+<h4 mat-dialog-title>Add a Table</h4>
+<form [formGroup]="segmentForm" (ngSubmit)="addNewSegment(segmentForm.value)">
+    <div mat-dialog-content>
+        <label>Name*</label>
+        <input type="text" placeholder="Ex: Computer Softwares" class="form-control" formControlName="name"/>
+        <br>
+        <label>Icon</label>
+        <select class="form-control" formControlName="icon">
+            <option ><img src="../../.././/../../assets/icons/segment-icon.svg"/></option>
+            <option><img src="../../.././/../../assets/icons/plus.svg" height="14px" /></option>
+            <option><img src="../../.././/../../assets/icons/thumb-icon.svg" height="14px" /></option>
+        </select>
+        <label>Color</label>
+        <select class="form-control" formControlName="color">
+            <option>Color 1</option>
+            <option>color 2</option>
+            <option>Color 3</option>
+        </select>
+    </div>
+    <div mat-dialog-actions>
+        <button type="submit" [disabled]="segmentForm.invalid" class="spacer-out-right-sm btn-modal btn-primary"> &nbsp;&nbsp;Add &nbsp;&nbsp;</button>
+        <button mat-button mat-dialog-close class=" btn-modal btn-default">Cancel</button>
+    </div>
+</form>

@@ -1,0 +1,61 @@
+.font-size-md {
+    font-size: 16px;
+}
+.text-sm {
+    font-size: 10px;
+}
+.font-size-md {
+    font-size: 20px;
+}
+.font-regular{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.active-link {
+    color: #334bfa;
+    border-bottom: 3px solid #334bfa;
+}
+.bold-font {
+    font-weight: bold;
+}
+.btn-prospector {
+    color: #fff;
+    border: none;
+    box-shadow: none;
+    border-radius: 5px;
+    width: 241px;
+    height: 57px;
+    font-size: 16px;
+    line-height: 19px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+}
+.btn-primary {
+    background-color: #334bfa !important;
+    color: white !important;
+}
+.btn-default {
+    background-color: white !important;
+    color: black;
+    border: 2px solid black !important;
+}
+.btn-modal {
+    background: #FFFFFF;
+    border: 2px solid #334BFA;
+    box-sizing: border-box;
+    border-radius: 3px;
+    color: #334BFA;
+    padding: 3px 25px 3px 25px;
+    font-size: 12px !important;
+}
+.btn-small {
+    border-radius: 5px;
+    height: 30px;
+    width: 100%;
+    font-size: 14px;
+    line-height: 16px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
